@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store/index'
 
-import registerFactory from './modules/common/index'
+import registerFactory from './common/index'
 
 registerFactory();
 
