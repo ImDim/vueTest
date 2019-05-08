@@ -31,7 +31,7 @@
             }
         },
         created: function() {
-            this.msgLocal = this.msg || this.Storage.myMessage;
+            this.msgLocal = this.Storage.myMessage || this.msg;
         }
     }
 </script>

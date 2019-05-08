@@ -14,7 +14,9 @@
     export default {
         name: "Test",
         data () {
-            return {}
+            return {
+                test: this.$store.state.test.test,
+            }
         },
 
         mounted () {
@@ -23,7 +25,7 @@
         methods: {
         },
         created: function () {
-            console.info(this.$router)
+            console.info(this.test)
         }
     }
 </script>

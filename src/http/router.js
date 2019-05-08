@@ -6,7 +6,7 @@ import store from '@/store'
 Vue.use(Router)
 
 /**
- * Guard the route from unauthorized users.
+ * Проверка авторизирован ли пользователь.
  *
  * @param  {Route}    to   The route we want to access.
  * @param  {Route}    from The route from which we are coming from.
@@ -25,7 +25,7 @@ function guardRoute (to, from, next) {
 }
 
 /**
- * The Router instance containing all the routes for the application.
+ * Экземпляр Router, содержащий все маршруты для приложения.
  */
 const router = new Router({
   base: '/app',
