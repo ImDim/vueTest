@@ -11,14 +11,6 @@ const routes = [
     isPublic: true
   },
   {
-    name: 'not-found',
-    path: '*',
-    component: () => import(/* webpackChunkName: "dashboard" */ '@/features/not-found/main.vue'),
-    title: '404 Not Fount',
-    layout: 'NotFound',
-    isPublic: true
-  },
-  {
     name: 'test',
     path: '/test',
     component: () => import(/* webpackChunkName: "dashboard" */ '@/features/test/main.vue'),
@@ -39,6 +31,14 @@ const routes = [
         component: () => import('@/features/test/components/extra.vue'),
       }
     ]
+  },
+  {
+    name: 'not-found',
+    path: '*',
+    component: () => import(/* webpackChunkName: "dashboard" */ '@/features/not-found/main.vue'),
+    title: '404 Not Fount',
+    layout: 'NotFound',
+    isPublic: true
   }
   // {
   //   name: 'login',

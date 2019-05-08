@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <input type="text" v-model="msg">
+        <input type="text" v-model="msgLocal">
         <button @click="getMessage">alert</button>
         <button @click="setMessage">save</button> <br>
     </div>
@@ -10,22 +10,28 @@
     export default {
         name: 'Alerter',
         providers: ['Alert', 'Storage'],
-        props: ['msg'],
-        data: function() {
-            return {
-                msg: ''
+        props: {
+            msg: {
+                type: String,
+                default: ''
             }
         },
+
         methods: {
             setMessage: function() {
-                this.Storage.myMessage = this.msg;
+                this.Storage.myMessage = this.msgLocal;
             },
             getMessage: function() {
-                this.Alert.hello(this.msg);
+                this.Alert.hello(this.msgLocal);
             }
         },
-        created: function () {
-            this.msg = this.Storage.myMessage || this.msg;
+        data: function() {
+            return {
+                msgLocal: ''
+            }
+        },
+        created: function() {
+            this.msgLocal = this.msg || this.Storage.myMessage;
         }
     }
 </script>
