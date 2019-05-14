@@ -28,6 +28,7 @@ function guardRoute (to, from, next) {
  * Экземпляр Router, содержащий все маршруты для приложения.
  */
 const router = new Router({
+  mode: 'history',
   base: '/app',
   // mode: 'history',  // <-- uncomment to turn on history mode (preferred)
 
